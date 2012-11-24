@@ -1,0 +1,18 @@
+<%- model_class = Product -%>
+<table class="table table-striped">
+  <tbody>
+    <td><%= Product.find(2).name  %></td>
+    <td><%= Product.find(2).description %></td>
+    <td><a href="#" id="example" class="btn btn-danger" rel="popover" data-content="Click on the image for details on it. To view the sellers web page click on the link. www.touchinspiration.com" data-original-title="Evening dress"><%= image_tag "/assets/red2.jpg" %></a></td>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js"></script>
+<script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js"></script>
+<script>
+$(function ()
+{ $("#example").popover();
+});
+</script>
+  </tbody>
+</table>

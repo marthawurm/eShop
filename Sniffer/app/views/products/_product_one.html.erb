@@ -1,0 +1,28 @@
+<%- model_class = Product -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:image) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <td><%= Product.first.name  %></td>
+    <td><%= Product.first.description %></td>
+    <td><a href="#" id="example" class="btn btn-danger" rel="popover" data-content="Click on the image for details on it. To view the sellers web page click on the link. www.touchinspiration.com" data-original-title="Hot Red Dress"><%= image_tag "/assets/reddress.jpg" %></a></td>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js"></script>
+<script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js"></script>
+<script>
+$(function ()
+{ $("#example").popover();
+});
+</script>
+  </tbody>
+</table>

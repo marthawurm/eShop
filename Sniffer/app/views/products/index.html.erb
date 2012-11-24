@@ -1,0 +1,9 @@
+<%= form_for @search, :url => products_path, :html => {:method => :get} do |f| %>
+  <%= f.label :name_like, 'Search' %>
+  <%= f.text_field :name_like, :size => 15 %><br />
+  <%= f.submit %>
+<% end %>
+<%= render "product_one" %>
+<%= render "product_two" %>
+<%= render "product_three" %>
+<%= render "product_four" %>

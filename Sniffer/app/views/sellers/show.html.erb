@@ -1,0 +1,19 @@
+<%- model_class = Seller -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @seller.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:town) %>:</strong></dt>
+  <dd><%= @seller.town %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:phone_number) %>:</strong></dt>
+  <dd><%= @seller.phone_number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @seller.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:web_address) %>:</strong></dt>
+  <dd><%= @seller.web_address %></dd>
+</dl>
+<%= render 'products/product_one' %>
+<%= render 'products/product_four' %>
